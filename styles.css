@@ -238,6 +238,36 @@ nav a.active {
   box-shadow: var(--shadow-lg);
 }
 
+nav a.telegram-link {
+  background: linear-gradient(135deg, #0088cc, #229ED9);
+  border-color: #0088cc;
+  color: white;
+  font-weight: 600;
+}
+
+nav a.telegram-link:hover {
+  background: linear-gradient(135deg, #006699, #0088cc);
+  border-color: #006699;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+nav a.vpn-link-nav {
+  background: linear-gradient(135deg, #10b981, #059669);
+  border-color: #10b981;
+  color: white;
+  font-weight: 600;
+}
+
+nav a.vpn-link-nav:hover {
+  background: linear-gradient(135deg, #059669, #047857);
+  border-color: #059669;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
 /* Restore gradient on logo hover */
 .nav-brand a:hover {
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
