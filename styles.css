@@ -1681,32 +1681,8 @@ nav.open .nav-list {
   }
 }
 
-/* Оптимизированный баннер казино */
-.casino-ad-optimized {
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
 
-.casino-ad-optimized::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
-  transition: left 0.5s ease;
-}
 
-.casino-ad-optimized:hover::before {
-  left: 100%;
-}
-
-.casino-ad-optimized a:hover img {
-  transform: scale(1.02);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
-}
 
 .ad-control-btn {
   transition: all 0.3s ease;
@@ -1717,96 +1693,6 @@ nav.open .nav-list {
   transform: translateY(-1px);
 }
 
-/* Адаптивность для баннера */
-@media (max-width: 768px) {
-  .casino-ad-optimized {
-    margin: 20px 0 !important;
-    padding: 15px !important;
-  }
-  
-  .casino-ad-optimized img {
-    max-width: 100% !important;
-  }
-}
-
-/* VPN Banner стили */
-.vpn-banner-section {
-  margin: var(--spacing-2xl) 0;
-  padding: 0 var(--spacing-md);
-}
-
-.vpn-banner {
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  border-radius: var(--radius-lg);
-  transition: all var(--transition-normal);
-}
-
-.vpn-banner a {
-  display: block;
-  text-decoration: none;
-  position: relative;
-  overflow: hidden;
-  border-radius: var(--radius-lg);
-}
-
-.vpn-banner-img {
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  transform: scale(0.93);
-  border-radius: var(--radius-lg);
-  transition: all var(--transition-normal);
-  box-shadow: var(--shadow-lg);
-}
-
-.vpn-banner:hover .vpn-banner-img {
-  transform: scale(0.95);
-  box-shadow: var(--shadow-xl);
-}
-
-/* Анимационный эффект */
-.vpn-banner::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
-  transition: left 0.5s ease;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.vpn-banner:hover::before {
-  left: 100%;
-}
-
-/* Адаптивность для VPN баннера */
-@media (max-width: 768px) {
-  .vpn-banner-section {
-    margin: var(--spacing-xl) 0;
-    padding: 0 var(--spacing-sm);
-  }
-  
-  .vpn-banner-img {
-    border-radius: var(--radius-md);
-  }
-  
-  .vpn-banner:hover .vpn-banner-img {
-    transform: scale(0.94);
-  }
-}
-
-@media (max-width: 480px) {
-  .vpn-banner-section {
-    margin: var(--spacing-lg) 0;
-  }
-}
 
 /* Стили для блока безопасности */
 .security-notice {

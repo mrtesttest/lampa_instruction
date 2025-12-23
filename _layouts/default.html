@@ -56,6 +56,10 @@
 
     <link rel="stylesheet" href="/styles.css" />
     <script src="https://vk.com/js/api/openapi.js?169" type="text/javascript"></script>
+    
+    <!-- Yandex.RTB -->
+    <script>window.yaContextCb=window.yaContextCb||[]</script>
+    <script src="https://yandex.ru/ads/system/context.js" async></script>
   </head>
 
   <!-- Google Tag Manager -->
@@ -99,6 +103,43 @@
     </header>
     
     <main class="container">
+      <!-- Yandex.RTB R-A-15996724-3 -->
+      <div id="yandex-ad-desktop">
+        <script>
+        window.yaContextCb.push(() => {
+            Ya.Context.AdvManager.render({
+                "blockId": "R-A-15996724-3",
+                "type": "fullscreen",
+                "platform": "desktop"
+            })
+        })
+        </script>
+      </div>
+      
+      <!-- Yandex.RTB R-A-15996724-4 -->
+      <div id="yandex-ad-mobile">
+        <script>
+        window.yaContextCb.push(() => {
+            Ya.Context.AdvManager.render({
+                "blockId": "R-A-15996724-4",
+                "type": "fullscreen",
+                "platform": "touch"
+            })
+        })
+        </script>
+      </div>
+      
+      <!-- Yandex.RTB R-A-15996724-1 -->
+      <div id="yandex_rtb_R-A-15996724-1"></div>
+      <script>
+      window.yaContextCb.push(() => {
+          Ya.Context.AdvManager.render({
+              "blockId": "R-A-15996724-1",
+              "renderTo": "yandex_rtb_R-A-15996724-1"
+          })
+      })
+      </script>
+      
       {{ content }}
     </main>
     
