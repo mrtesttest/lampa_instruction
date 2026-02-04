@@ -37,6 +37,26 @@ layout: default
   </ul>
 </nav>
 
+<!-- Предупреждение о блокировках -->
+<section class="geo-warning">
+  <div class="geo-warning-content">
+    <div class="geo-warning-icon">🌍</div>
+    <div class="geo-warning-text">
+      <h3>⚠️ Важно для пользователей из РФ</h3>
+      <p>
+        Этот плагин и источники контента могут быть недоступны на территории Российской Федерации 
+        из-за региональных ограничений и блокировок. Для стабильной работы рекомендуем 
+        использовать <a href="https://getblancvpn.deals/?ref=yahor" target="_blank" rel="noopener noreferrer" class="vpn-link-highlighted">надёжный VPN-сервис</a>.
+      </p>
+      <div class="vpn-features">
+        <span class="vpn-feature">✓ Обход блокировок</span>
+        <span class="vpn-feature">✓ Быстрое подключение</span>
+        <span class="vpn-feature">✓ Безопасность</span>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Основная информация -->
 <section id="installation" class="content-card">
   <h2>🔧 Установка плагина</h2>
@@ -140,13 +160,6 @@ layout: default
   {% endif %}
 </section>
 
-<!-- Комментарии VK -->
-<section class="comments-section">
-  <h2>💬 Комментарии</h2>
-  <div id="vk_comments"></div>
-</section>
-
-
 <!-- Поддержка -->
 <section class="support-section">
   <h2>🆘 Нужна помощь?</h2>
@@ -188,10 +201,105 @@ function copyToClipboard(elementId) {
   }
 </script>
 
-<script type="text/javascript">
-        VK.init({
-        apiId: 53860142,
-        onlyWidgets: true
-      });
-  VK.Widgets.Comments('vk_comments');
-</script>
+<style>
+  /* Geo Warning Section */
+  .geo-warning {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 15px;
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 1200px;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+    }
+    50% {
+      box-shadow: 0 10px 40px rgba(102, 126, 234, 0.5);
+    }
+  }
+
+  .geo-warning-content {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    color: white;
+  }
+
+  .geo-warning-icon {
+    font-size: 60px;
+    animation: rotate 10s linear infinite;
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .geo-warning-text h3 {
+    margin: 0 0 15px 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+  }
+
+  .geo-warning-text p {
+    margin: 0 0 20px 0;
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.95);
+  }
+
+  .vpn-link-highlighted {
+    color: #ffd700;
+    font-weight: bold;
+    text-decoration: underline;
+    transition: all 0.3s ease;
+  }
+
+  .vpn-link-highlighted:hover {
+    color: #ffed4e;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+  }
+
+  .vpn-features {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .vpn-feature {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    backdrop-filter: blur(10px);
+  }
+
+  @media (max-width: 768px) {
+    .geo-warning-content {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .geo-warning-icon {
+      font-size: 50px;
+    }
+
+    .geo-warning-text h3 {
+      font-size: 20px;
+    }
+
+    .vpn-features {
+      justify-content: center;
+    }
+  }
+</style>
